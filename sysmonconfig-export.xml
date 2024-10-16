@@ -1,0 +1,74 @@
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>*</HashAlgorithms>
+  <ArchiveDirectory>SysmonArchive</ArchiveDirectory>
+  <EventFiltering>
+    <!-- ID: 1 Process Create-->
+    <ProcessCreate onmatch="exclude"/>
+
+    <!-- ID: 2 File creation time changed-->
+    <FileCreateTime onmatch="exclude"/>   
+
+    <!-- ID: 3 Network connection detected-->
+    <NetworkConnect onmatch="exclude"/>   
+
+    <!-- ID: 5 Process terminated-->
+    <ProcessTerminate onmatch="exclude"/>  
+
+    <!-- ID: 6 Driver loaded-->
+    <DriverLoad onmatch="exclude"/>     
+
+    <!-- ID: 7 Image loaded-->
+    <ImageLoad onmatch="exclude"/>   
+
+    <!-- ID: 8 CreateRemoteThread detected-->
+    <CreateRemoteThread onmatch="exclude"/> 
+
+    <!-- ID: 9 RawAccessRead detected-->
+    <!-- Disabled because reading disk causes massive load-->
+    <RawAccessRead onmatch="include"/> 
+
+    <!-- ID: 10 Process accessed-->
+    <ProcessAccess onmatch="exclude"/>
+
+    <!-- ID: 11 File created-->
+    <FileCreate onmatch="exclude"/>
+
+    <!-- ID: 12 Registry object added or deleted, 13 Registry value set, 14 Registry object renamed-->
+    <RegistryEvent onmatch="exclude"/>
+
+    <!-- ID:  File stream created-->
+    <FileCreateStreamHash onmatch="exclude"/>
+
+    <!-- ID:  17 Pipe Created, 18 Pipe Connected-->
+    <PipeEvent onmatch="exclude"/>
+
+    <!-- ID: 19 WmiEventFilter activity detected, 20 WmiEventConsumer activity detected, 21 WmiEventConsumerToFilter activity detected-->
+    <WmiEvent onmatch="exclude"/>
+
+    <!-- ID: 22 Dns query-->
+    <DnsQuery onmatch="exclude"/>
+
+    <!-- ID: 23 File Delete archived -->
+    <FileDelete onmatch="include"/>
+
+    <!-- ID: 24 Clipboard changed-->
+    <ClipboardChange onmatch="exclude"/>
+
+    <!-- ID: 25 Process Tampering-->
+    <ProcessTampering onmatch="exclude"/>
+
+    <!-- ID: 26: File Delete Logged -->
+    <FileDeleteDetected onmatch="exclude"/>
+
+    <!-- ID: 27 File Block Executable-->
+    <!-- BREAKS EXECUTABLES IF ENABLED UNLESS HEAVY CONFIGURATION IS MADE-->
+    <!-- <FileBlockExecutable onmatch="include"/> -->
+
+    <!-- ID: 28 File Block Shredding-->
+    <FileBlockShredding onmatch="exclude"/>
+
+    <!-- ID: 29 File Executable Detected-->
+    <FileExecutableDetected onmatch="exclude"/>
+
+  </EventFiltering>
+</Sysmon>
