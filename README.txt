@@ -11,7 +11,7 @@ Follow the prompts on screen on the script!
 
 
 Files in the same directory should be:
-- splunkuniversalinstaller.msi (MUST BE THIS NAME)
+- splunkuniversalforwarder.msi (MUST BE THIS NAME)
 - Sysmon.exe (FROM SYSINTERNALS)
 - sysmonconfig.xml (OPTIONAL)
 - inputs.conf (Optional)
