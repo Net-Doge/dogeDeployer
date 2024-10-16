@@ -1,4 +1,4 @@
-This product was developed by net.doge (SSgt Benjamin Fair)
+This product was developed by net.doge
 
 The files included are examples of what needs to be in the folder,
 Run the file dogeDeployer.bat as Administrator or it will not function well if you're trying to install sysmon
